@@ -1,0 +1,11 @@
+
+type User {
+  walletId: Int! @id,
+  discordId:Int! @search,
+  name:String @search(by: [term]),
+  avatar: String  @search(by: [hash]),
+  roles: [String!],
+  currentRank: Int @search,
+  previousRank: Int @search
+  
+}

@@ -1,0 +1,78 @@
+{
+  "name": "ninja-nft-app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "type-check": "tsc --pretty --noEmit",
+    "format": "prettier --write .",
+    "lint": "eslint . --ext ts --ext tsx --ext js"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "pre-push": "yarn run type-check"
+    }
+  },
+  "lint-staged": {
+    "*.@(ts|tsx)": [
+      "yarn lint",
+      "yarn format"
+    ]
+  },
+  "dependencies": {
+    "@ant-design/icons": "^4.6.2",
+    "@apollo/client": "^3.3.19",
+    "@contentful/rich-text-react-renderer": "^15.0.0",
+    "@project-serum/serum": "^0.13.38",
+    "@project-serum/sol-wallet-adapter": "^0.2.0",
+    "@solana/spl-token": "^0.1.4",
+    "@solana/web3.js": "^1.14.0",
+    "@types/coingecko-api": "^1.0.0",
+    "@types/react-slick": "^0.23.4",
+    "@types/uuid": "^8.3.1",
+    "antd": "^4.16.0",
+    "apexcharts": "^3.26.3",
+    "axios": "^0.21.1",
+    "bootstrap": "4.6.0",
+    "bs58": "^4.0.1",
+    "coingecko-api": "^1.0.10",
+    "contentful": "^8.4.2",
+    "cycle": "^1.0.3",
+    "date-fns": "^2.22.1",
+    "deepmerge": "^4.2.2",
+    "firebase": "^8.7.1",
+    "graphql": "^15.5.0",
+    "graphql-request": "^3.4.0",
+    "immutable-tuple": "^0.4.10",
+    "lodash": "^4.17.21",
+    "next": "10.2.3",
+    "qs": "^6.10.1",
+    "react": "17.0.2",
+    "react-apexcharts": "^1.3.9",
+    "react-bootstrap": "^1.6.1",
+    "react-dom": "17.0.2",
+    "react-responsive-carousel": "^3.2.18",
+    "react-slick": "^0.28.1",
+    "styled-components": "^5.3.0",
+    "swr": "^0.5.6",
+    "tweetnacl": "^1.0.3",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "@types/react": "17.0.8",
+    "@types/styled-components": "^5.1.9",
+    "@typescript-eslint/eslint-plugin": "^4.18.0",
+    "@typescript-eslint/parser": "^4.18.0",
+    "babel-plugin-styled-components": "^1.12.0",
+    "eslint": "^7.27.0",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-react": "^7.22.0",
+    "husky": "^6.0.0",
+    "lint-staged": "^11.0.0",
+    "prettier": "^2.3.0",
+    "typescript": "4.2.4"
+  }
+}
